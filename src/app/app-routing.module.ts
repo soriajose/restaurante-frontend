@@ -2,15 +2,25 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'update-restaurante/:id',
+    loadChildren: () => import('./pages/update-restaurante/update-restaurante.module').then( m => m.UpdateRestaurantePageModule)
+  },
+  {
+    path: 'create-restaurante',
+    loadChildren: () => import('./pages/create-restaurante/create-restaurante.module').then( m => m.CreateRestaurantePageModule)
+  },
+  
 ];
 
 @NgModule({

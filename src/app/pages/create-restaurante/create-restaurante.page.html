@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>create-restaurante</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <form (ngSubmit)="crearRestaurante()">
+        <ion-list>
+            <ion-item>
+                <ion-input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="restaurante.nombre"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Direccion" name="direccion" [(ngModel)]="restaurante.direccion"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Descripcion" name="descripcion" [(ngModel)]="restaurante.descripcion"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Imagen" name="imagen" [(ngModel)]="restaurante.imagen"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input type="text" placeholder="Precio" name="precio" [(ngModel)]="restaurante.precio"></ion-input>
+            </ion-item>
+        </ion-list>
+
+
+    </form>
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-button color="primary" expand="full" (click)="crearRestaurante()" routerLink="/home">Guardar</ion-button>
+    <ion-button color="danger" expand="full" routerLink="/home">Cancelar</ion-button>
+</ion-footer>

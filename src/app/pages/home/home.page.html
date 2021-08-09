@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Restaurantes</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list *ngFor="let restaurante of restaurantes">
+        <ion-item>
+            {{restaurante.nombre}}
+
+            <ion-icon slot="end" name="create" (click)="irUpdateRestaurante(restaurante.id)"></ion-icon>
+            <ion-icon slot="end" name="close" (click)="eliminarRestaurante(restaurante.id)"></ion-icon>
+
+        </ion-item>
+
+    </ion-list>
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-button color="primary" expand="full" routerLink="/create-restaurante">Añadir Restaurante</ion-button>
+</ion-footer>
